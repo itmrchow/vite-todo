@@ -1,0 +1,60 @@
+.todo-board {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f0f2f5;
+}
+
+.board-header {
+  padding: 20px;
+  background: white;
+  border-bottom: 1px solid #e8e8e8;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.board-header h1 {
+  margin: 0;
+  color: #333;
+  text-align: center;
+  font-size: 24px;
+}
+
+.error-message {
+  background: #ff6b6b;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 12px;
+  text-align: center;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 18px;
+  color: #666;
+}
+
+.board-columns {
+  display: flex;
+  gap: 16px;
+  padding: 20px;
+  flex: 1;
+  overflow-x: auto;
+  min-height: 0;
+}
+
+@media (max-width: 1024px) {
+  .board-columns {
+    flex-direction: column;
+    overflow-x: visible;
+    overflow-y: auto;
+  }
+  
+  .todo-column {
+    min-width: auto;
+    max-height: none;
+  }
+}
